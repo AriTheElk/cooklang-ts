@@ -1,6 +1,6 @@
 {
-  "name": "@cooklang/cooklang-ts",
-  "version": "1.2.5",
+  "name": "cooklangx-ts",
+  "version": "1.3.0",
   "description": "Cooklang-TS is a TypeScript library for parsing and manipulating Cooklang recipes.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,8 @@
     "prepare": "npm run build",
     "watch": "ts-node-dev --respawn --clear --rs src/index.ts",
     "docs": "node tools/docs.js && typedoc --readme README.md --out docs src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",

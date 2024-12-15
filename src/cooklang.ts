@@ -4,7 +4,7 @@
  * @see {@link https://cooklang.org/docs/spec/#ingredients|Cooklang Ingredient}
  */
 export interface Ingredient {
-    type: 'ingredient';
+    type: "ingredient";
     name: string;
     quantity: string | number;
     units: string;
@@ -17,7 +17,7 @@ export interface Ingredient {
  * @see {@link https://cooklang.org/docs/spec/#cookware|Cooklang Cookware}
  */
 export interface Cookware {
-    type: 'cookware';
+    type: "cookware";
     name: string;
     quantity: string | number;
     step?: number;
@@ -29,7 +29,19 @@ export interface Cookware {
  * @see {@link https://cooklang.org/docs/spec/#timer|Cooklang Timer}
  */
 export interface Timer {
-    type: 'timer';
+    type: "timer";
+    name?: string;
+    quantity: string | number;
+    units: string;
+}
+
+/**
+ * A temperature
+ *
+ * @see x@xxxx https://cooklang.org/docs/spec/#temperature|Cooklang Temperature}
+ */
+export interface Temperature {
+    type: "temperature";
     name?: string;
     quantity: string | number;
     units: string;
@@ -39,14 +51,14 @@ export interface Timer {
  * A piece of text
  */
 export interface Text {
-    type: 'text';
+    type: "text";
     value: string;
 }
 
 /**
  * A step consisting of multiple ingredients, cookware, timers, and text
  */
-export type Step = Array<Ingredient | Cookware | Timer | Text>;
+export type Step = Array<Ingredient | Cookware | Timer | Text | Temperature>;
 
 /**
  * A recipes metadata
